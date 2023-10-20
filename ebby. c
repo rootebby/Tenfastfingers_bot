@@ -3,28 +3,28 @@
 #include <ctype.h>
 
 int main() {
-    char input_string[1000];  // You can adjust the size as needed
+    char input_string[1000]; 
     char c;
 
-    // Read and concatenate 4 lines of input string
+    
     for (int i = 0; i < 4; i++) {
         if (i > 0) {
-            strcat(input_string, "\n");  // Add a newline character between lines
+            strcat(input_string, "\n"); 
         }
         while ((c = getchar()) != '\n' && c != EOF) {
             strncat(input_string, &c, 1);
         }
     }
 
-    // Convert the input string to lowercase to make it case-insensitive
+    
     for (int i = 0; input_string[i]; i++) {
         input_string[i] = tolower(input_string[i]);
     }
 
-    // Initialize an array to store vowel character occurrences
+   
     int vowel_occurrences[5] = {0};  // a, e, i, o, u
 
-    // Count the occurrences of each vowel character
+    
     for (int i = 0; input_string[i]; i++) {
         if (input_string[i] == 'a') {
             vowel_occurrences[0]++;
@@ -39,8 +39,7 @@ int main() {
         }
     }
 
-    // Print the occurrences of each vowel character
-    printf("Vowel Character Occurrences\n");
+    ("Vowel Character Occurrences\n");
     printf("a %d\n", vowel_occurrences[0]);
     printf("e %d\n", vowel_occurrences[1]);
     printf("i %d\n", vowel_occurrences[2]);
